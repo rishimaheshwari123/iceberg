@@ -1351,7 +1351,7 @@ header .search-box form button {
 
 /*left side*/
 .services .facial-left-thumbnail {
-	background: url(../images/home-1/services/facial/massage.jpg) no-repeat 50% 50%;
+	background: url(https://static.wixstatic.com/media/f73d9e_cb68501a71214b258992c9c139c52b6e~mv2.jpeg/v1/fill/w_493,h_544,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f73d9e_cb68501a71214b258992c9c139c52b6e~mv2.jpeg) no-repeat 50% 50%;
 	background-size: cover;
 	height: 625px;
 	overflow: hidden;
@@ -1406,6 +1406,13 @@ header .search-box form button {
 	text-align: center;
 	padding: 110px 15px 85px; 
 	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+.services .foot .victorial-foot-massage5 {
+	background: #fff;
+	padding: 30px; 
+	/* text-align: center;
+	text-transform: uppercase; */
 	margin-bottom: 30px;
 }
 
