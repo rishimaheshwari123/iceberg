@@ -671,7 +671,7 @@ header .search-box form button {
 
 /*title*/
 .hero .title {
-	background: url(../images/home-1/title-bg.png) no-repeat;
+	/* background: url(../images/home-1/title-bg.png) no-repeat; */
 	width: 894px;
 	height: 341px;
 	background-size: cover;
@@ -3222,7 +3222,7 @@ footer .copyright .nav a:hover {
 	background: url(../images/service/middle-banar.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	height: 1048px;
-	text-align: center;
+	/* text-align: center; */
 	color: #fff;
 	position: relative;
 }
@@ -3237,6 +3237,7 @@ footer .copyright .nav a:hover {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	z-index: 5;
+	left: -17%;
 }
 
 .middle-banar h2 {
@@ -3272,7 +3273,7 @@ footer .copyright .nav a:hover {
 
 #service .services .section-title h2 {
 	font-size: 42px;
-	line-height: 30px;
+	line-height: 45px;
 	margin: 0 0 0.7em;
 }
 
@@ -4996,8 +4997,57 @@ footer .copyright .nav a:hover {
 		margin-top: 35px !important;
 		width: 105%;
 	}
+	.middle-banar .container {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+	left: 0%;
+}
+.middle-banar {
+	background: url(../images/service/middle-banar.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	min-height: 1048px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+}
 }
 
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or a fixed height */
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+
+.hero-slider video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: for text readability */
+  z-index: 10;
+}
+
+.title {
+  position: relative;
+  z-index: 20;
+  padding: 2rem;
+  color: white;
+}
 
 
 /*--------------------------------------------------------------
