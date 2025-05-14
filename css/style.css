@@ -1772,11 +1772,11 @@ header .search-box form button {
 .news-shop .news .portfolio h3 + p {
 	font-size: 19px;
 	line-height: 30px;
-	margin: 0 0 2em;
+	margin: 0 0 1em;
 }
 
 .news-shop .news .portfolio span {
-	font-size: 19px;
+	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
 }
