@@ -242,7 +242,7 @@ form input[type="number"] {
 
 /*common-header*/
 .common-header {
-	background-color: #111111;
+	background-color: #26262686;
 	position: static;
     left: 0;
     top: 0;
@@ -1753,6 +1753,28 @@ header .search-box form button {
 	padding: 100px 0;
 	position: relative;
 }
+.news-shop {
+  position: relative;
+  background: url(../images/news-bg.jpg) no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
+}
+
+.news-shop .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.news-shop .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 
 
@@ -3263,6 +3285,9 @@ footer .copyright .nav a:hover {
   position: relative;
   z-index: 2;
 }
+
+
+
 
 .middle-banar h2 {
 	font-size: 40px;
