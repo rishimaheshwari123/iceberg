@@ -5825,3 +5825,77 @@ footer .copyright .nav a:hover {
     width: 100%;
   }
 }
+
+
+
+
+.therapy-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.therapy-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.therapy-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.therapy-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0 10px;
+}
+
+.point {
+  margin-bottom: 20px;
+}
+
+.point .heading {
+  color: green;
+  font-style: italic;
+  font-size: 11px;
+  margin: 0;
+}
+
+.point .subheading {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 2px 0 0;
+}
+
+.therapy-card button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.therapy-card button:hover {
+  background-color: #333;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .therapy-section {
+    /* justify-content: space-between; */
+  }
+}
