@@ -242,7 +242,7 @@ form input[type="number"] {
 
 /*common-header*/
 .common-header {
-	background-color: #26262686;
+	background-color: white;
 	position: static;
     left: 0;
     top: 0;
@@ -469,7 +469,7 @@ header .navbar #navbar > ul > li {
 
 header .navbar #navbar ul > li > a {
 	font-weight: 600;
-	color: #fff;
+	color: black;
 	text-transform: uppercase;
 	line-height: 16px;
 	padding: 5px 11px;
@@ -553,7 +553,7 @@ header .search-wrapper {
 
 header .search-wrapper button {
 	background: transparent;
-	color: #fff;
+	color: black;
 	border: 0;
 }
 
@@ -1711,6 +1711,12 @@ header .search-box form button {
 }
 .services .body-right-thumbnail-ozone {
 	background: url(../images//home-1//services//body/thumb/570_x_470_Iceberg_ozone_therapy_machine[1].png) no-repeat 50% 50%;
+	/* background: url(../images/570\ x\ 470[1].png) no-repeat 50% 50%; */
+	background-size: cover;
+	height: 625px;
+}
+.services .body-right-thumbnail-ozone-final {
+	background: url(../images/ozone.png) no-repeat 50% 50%;
 	/* background: url(../images/570\ x\ 470[1].png) no-repeat 50% 50%; */
 	background-size: cover;
 	height: 625px;
@@ -5850,7 +5856,7 @@ footer .copyright .nav a:hover {
 
 .therapy-card img {
   width: 100%;
-  height: 180px;
+  /* height: 180px; */
   object-fit: cover;
   border-radius: 8px;
 }
