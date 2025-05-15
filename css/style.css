@@ -1704,10 +1704,18 @@ header .search-box form button {
 
 /*body-right-thumbnail*/
 .services .body-right-thumbnail {
-	background: url(../images//home-1//services//body/thumb/570_x_470_Iceberg_ozone_therapy_machine[1].png) no-repeat 50% 50%;
+	/* background: url(../images//home-1//services//body/thumb/570_x_470_Iceberg_ozone_therapy_machine[1].png) no-repeat 50% 50%; */
+	background: url(../images/570\ x\ 470[1].png) no-repeat 50% 50%;
 	background-size: cover;
 	height: 625px;
 }
+.services .body-right-thumbnail-ozone {
+	background: url(../images//home-1//services//body/thumb/570_x_470_Iceberg_ozone_therapy_machine[1].png) no-repeat 50% 50%;
+	/* background: url(../images/570\ x\ 470[1].png) no-repeat 50% 50%; */
+	background-size: cover;
+	height: 625px;
+}
+
 .services .body-right-thumbnail2 {
 	background: url("https://static.wixstatic.com/media/f73d9e_13b73a36d9a943f4a30fdb8ff40c2994~mv2.jpeg/v1/fill/w_493,h_716,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f73d9e_13b73a36d9a943f4a30fdb8ff40c2994~mv2.jpeg") no-repeat 50% 50%;
 	background-size: cover;
@@ -5788,3 +5796,32 @@ footer .copyright .nav a:hover {
 
 
 
+
+
+.image-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+.image {
+  width: 48%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive - stack vertically on small screens */
+@media (max-width: 768px) {
+  .image-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image {
+    width: 100%;
+  }
+}
