@@ -1720,14 +1720,14 @@ header .search-box form button {
 #1.7.2	foot
 --------------------------------------------------------------*/
 .services .foot-left-thumbnail {
-	background: url("https://static.wixstatic.com/media/11062b_b5160df4c04846a0b8ff0242246f49fa~mv2.jpg/v1/fill/w_493,h_879,al_r,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_b5160df4c04846a0b8ff0242246f49fa~mv2.jpg") no-repeat 50% 50%;
+	background: url(../images/570_x_470_Ozone_benefits[1].png) no-repeat 50% 50%;
 	background-size: cover;
-	height: 615px;
+	height: 473px;
 }
 .services .foot-left-thumbnail2 {
-	background: url("https://static.wixstatic.com/media/11062b_fd2b0ee2515645939b83bc5f71e7a456~mv2.jpg/v1/fill/w_493,h_716,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_fd2b0ee2515645939b83bc5f71e7a456~mv2.jpg") no-repeat 50% 50%;
+	background: url(../images//570_x_470_Lymphatic_benefits[1].png) no-repeat 50% 50%;
 	background-size: cover;
-	height: 615px;
+	height: 473px;
 }
 
 
