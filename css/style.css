@@ -5814,7 +5814,7 @@ footer .copyright .nav a:hover {
 
 .image {
   width: 48%;
-  height: auto;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
