@@ -251,7 +251,7 @@ form input[type="number"] {
 }
 
 .common-header .navbar {
-	padding-bottom: 24px;
+	padding-bottom: 11px;
 }
 
 .common-header .navbar #navbar {
@@ -687,7 +687,7 @@ header .search-box form button {
 }
 
 .hero .title > div {
-	margin-top: 75px;
+	margin-top: 225px;
 }
 
 .hero .playfair {
@@ -1404,8 +1404,7 @@ header .search-box form button {
 .services .foot .victorial-foot-massage {
 	background: #fff;
 	text-align: center;
-	padding: 110px 15px 85px; 
-	/* text-transform: uppercase; */
+padding: 106px 15px 85px;	/* text-transform: uppercase; */
 	margin-bottom: 30px;
 }
 .services .foot .victorial-foot-massage5 {
@@ -1725,7 +1724,7 @@ header .search-box form button {
 .services .body-right-thumbnail2 {
 	background: url(../images/change2.png) no-repeat 50% 50%;
 	background-size: cover;
-	height: 625px;
+	height: 563px;
 }
 
 
