@@ -2351,7 +2351,9 @@ footer ul li a:hover {
 /*victoria*/
 .victoria img {
 	display: block;
-	margin-bottom: 34px;
+    margin-bottom: 26px;
+    width: 133px;
+    margin-left: -15px;
 }
 
 .victoria p {
