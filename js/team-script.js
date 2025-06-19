@@ -60,7 +60,7 @@ $(function () {
         $this.appear(function () {
             function progress(percent, $element) {
                 var progressBarWidth = percent * $element.width() / 100;
-                $element.find('div').animate({ width: progressBarWidth }, 500).html(percent + "% ");
+                $element.find('div').animate({ width: progressBarWidth }, 500);
             }
 
             progress(95, $('#rheumatoid-arthritis'));
