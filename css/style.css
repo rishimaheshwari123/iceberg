@@ -1740,6 +1740,7 @@ padding: 106px 15px 85px;	/* text-transform: uppercase; */
 	height: 668px;
 }
 .services .foot-left-thumbnail2 {
+	/* background: url(../images//570_x_470_Lymphatic_benefits[1].png) no-repeat 50% 50%; */
 	background: url(../images//570_x_470_Lymphatic_benefits[1].png) no-repeat 50% 50%;
 	background-size: cover;
 	height: 572px;
@@ -3422,7 +3423,8 @@ footer .copyright .nav a:hover {
 #shop .shop .playfair,
 #shop-details .shop .playfair {
 	font-size: 15px;
-	color: #88a800;
+	text-align: start;
+	color: black;
 	display: block;
 	margin-bottom: 45px;
 }
