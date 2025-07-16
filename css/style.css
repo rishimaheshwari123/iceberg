@@ -5936,3 +5936,138 @@ footer .copyright .nav a:hover {
 .image-wrapper:hover .overlay {
   opacity: 1;
 }
+
+
+
+
+.navbar {
+  background-color: white;
+}
+
+.nav-container {
+  max-width: 80vw;
+  margin: auto;
+  padding: 20px 0  0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT: Logo */
+.nav-left img {
+  height: 60px;
+}
+
+/* CENTER: Links */
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-center li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* RIGHT: Buttons */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Buttons */
+.desktop-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn.orange {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.orange:hover {
+  background-color: darkorange;
+  color: white;
+}
+
+/* Toggle button */
+.mobile-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile dropdown (hidden by default) */
+.mobile-dropdown {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.mobile-dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-dropdown ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-dropdown .nav-buttons {
+display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-center,
+  .desktop-buttons {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .mobile-dropdown.active {
+    display: flex;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+#navbutton{
+	background: #86ab00;
+	font-size: 18px;
+}
+#navbutton:hover{
+	background: #86ab00 !important;
+	font-size: 18px;
+
+}

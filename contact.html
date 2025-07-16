@@ -34,65 +34,47 @@
   </div>
   <!-- end of pre-loder -->
 
-  <header class="common-header">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"><img src="images/home-1/logo.png" alt="Logo" style="    width: 177px;
-    height: 68px;" /></a>
-        </div>
-
-        <div id="navbar" class="pull-left collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class=""><a href="index.html">Home</a></li>
-
-            <li class=""><a href="about.html">About Us</a></li>
-
-            <li><a href="ozone.html">Ozone</a></li>
-            <li><a href="LymphaticTherapy.html">Lymphatic Therapy</a></li>
-                                             <li class=""><a href="index.html#price">PRICING</a></li>
-
-
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="search-wrapper pull-right">
-          <ul>
-            <li>
-              <button class="open-menu"><i class="fa fa-bars"></i></button>
-            </li>
-
-            <li>
-              <button class="open-search">
-                <!-- <i class="fa fa-search"></i> -->
-              </button>
-              <ul class="search-box">
-                <li>
-                  <form action="#">
-                    <input type="text" placeholder="Search...." />
-                    <button type="submit">
-                      <!-- <i class="fa fa-search"></i> -->
-                    </button>
-                  </form>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <!-- end of search-wrapper -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- LEFT: Logo -->
+      <div class="nav-left">
+        <img src="images/home-1/logo.png" alt="Logo" />
       </div>
-      <!-- end of container -->
-    </nav>
-    <!-- end of nav -->
-  </header>
+
+      <!-- CENTER: Links -->
+      <ul class="nav-center">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ozone.html">Ozone</a></li>
+        <li><a href="LymphaticTherapy.html">Lymphatic Therapy</a></li>
+        <li><a href="index.html#price">PRICING</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- RIGHT: Buttons + Mobile Toggle -->
+      <div class="nav-right">
+        <div class="desktop-buttons">
+<a href="tel:6789388351" class="btn orange" id="navbutton">Call Now</a>
+        </div>
+        <button class="mobile-toggle">☰</button>
+      </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN -->
+    <div class="mobile-dropdown">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ozone.html">Ozone</a></li>
+        <li><a href="LymphaticTherapy.html">Lymphatic Therapy</a></li>
+        <li><a href="index.html#price">PRICING</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+<a href="tel:6789388351" class="btn orange" id="navbutton">Call Now</a>
+      </div>
+    </div>
+  </nav>
   <!-- end of header -->
 
   <!-- <section class="map">
@@ -335,7 +317,20 @@
     <!-- end of booking -->
   </div>
   <!-- end of appoinment-popup-box -->
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".mobile-toggle");
+  const dropdown = document.querySelector(".mobile-dropdown");
 
+  toggleBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("active");
+  });
+});
+
+
+
+
+</script>
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
