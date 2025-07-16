@@ -88,6 +88,19 @@
     </div>
   </nav>
 
+
+ <div class="slider">
+  <div class="slides-wrapper">
+    <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" class="slide active" />
+    <img src="/images/slider1.jpg" class="slide" />
+        <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" class="slide active" />
+
+    <img src="/images/slider1.jpg" class="slide" />
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
   <!-- end of header -->
 
   <div class="hero row" id="main-hero">
@@ -993,6 +1006,23 @@
   <!-- end of wrapper -->
 </div>
 
+
+<!-- Modal -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h2 class="modal-title">Book Your Session</h2>
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
   <!-- news-letter-popup -->
 <script>
  document.addEventListener("DOMContentLoaded", () => {
@@ -1015,6 +1045,37 @@
   <script src="js/jquery.appear.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/index-script.js"></script>
+
+
+ <script>
+  let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const total = slides.length;
+
+const showSlide = (index) => {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) slide.classList.add("active");
+  });
+};
+
+document.querySelector(".prev").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + total) % total;
+  showSlide(currentIndex);
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % total;
+  showSlide(currentIndex);
+});
+
+// Autoplay every 5 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % total;
+  showSlide(currentIndex);
+}, 5000);
+
+ </script>
   <!-- <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -1022,6 +1083,64 @@
     <script src="js/jquery.appear.js"></script>
     <script src="js/common-script.js"></script> -->
     <script src="js/service-script.js"></script>
+
+
+
+   <script>
+const modal = document.getElementById('bookingModal');
+const bookButtons = document.querySelectorAll('.therapy-card button');
+const bookingForm = document.getElementById('bookingForm');
+const submitBtn = document.getElementById('submitBtn');
+
+bookButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+  bookingForm.reset();
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Submit';
+}
+
+bookingForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  const formData = {
+    name: bookingForm.name.value,
+    email: bookingForm.email.value,
+    phone: bookingForm.phone.value
+  };
+
+  try {
+    const response = await fetch('http://localhost:8080/api/v1/contact/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert('Booking successful!');
+      closeModal();
+    } else {
+      alert('Something went wrong!');
+    }
+  } catch (err) {
+    alert('Error while booking.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit';
+  }
+});
+</script>
+
+
+
+
 </body>
 
 </html>
