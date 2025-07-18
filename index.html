@@ -59,7 +59,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="ozone.html">Ozone</a></li>
         <li><a href="LymphaticTherapy.html">Lymphatic Therapy</a></li>
-        <li><a href="index.html#price">PRICING</a></li>
+        <li><a href="index.html#price">Pricing</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
 
@@ -79,7 +79,7 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="ozone.html">Ozone</a></li>
         <li><a href="LymphaticTherapy.html">Lymphatic Therapy</a></li>
-        <li><a href="index.html#price">PRICING</a></li>
+        <li><a href="index.html#price">Pricing</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-buttons">
@@ -102,7 +102,7 @@
 </div> -->
 
 
-<div class="slider">
+<!-- <div class="slider">
   <div class="slides-wrapper">
     <div class="slide active">
       <picture>
@@ -126,7 +126,7 @@
   </div>
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
-</div>
+</div> -->
 
 
   <!-- end of header -->
@@ -512,15 +512,15 @@
         <img src="./images/price/1.png" alt="Ozone Therapy">
         <h3>OZONE SAUNA THERAPY</h3>
         <div class="point">
-          <p class="heading">FULL BODY Ozone Sauna Therapy PACKAGES + PRICING</p>
+          <p class="heading">FULL BODY Ozone Sauna Therapy PACKAGES + Pricing</p>
           <p class="subheading">1 Session (45 Minutes) - $99</p>
         </div>
         <div class="point">
-          <p class="heading">FULL BODY Ozone Sauna Therapy PACKAGES + PRICING</p>
+          <p class="heading">FULL BODY Ozone Sauna Therapy PACKAGES + Pricing</p>
           <p class="subheading">5 Pack ($75/Session) - $375</p>
         </div>
         <div class="point">
-          <p class="heading">FULL BODY Ozone Sauna Therapy PACKAGES + PRICING</p>
+          <p class="heading">FULL BODY Ozone Sauna Therapy PACKAGES + Pricing</p>
           <p class="subheading">10 Pack($70/Session) - $700</p>
         </div>
         <button>Book Now</button>
@@ -530,15 +530,15 @@
         <img src="./images/price/2.png" alt="Lymphatic Therapy">
         <h3>DERMASHAPE LYMPHATIC THERAPY</h3>
         <div class="point">
-          <p class="heading">FULL BODY Dermashape Lymphatic Therapy PACKAGES + PRICING</p>
+          <p class="heading">FULL BODY Dermashape Lymphatic Therapy PACKAGES + Pricing</p>
           <p class="subheading">1 Session - $175</p>
         </div>
         <div class="point">
-          <p class="heading">FULL BODY Dermashape Lymphatic Therapy PACKAGES + PRICING</p>
+          <p class="heading">FULL BODY Dermashape Lymphatic Therapy PACKAGES + Pricing</p>
           <p class="subheading">4 Session - $650</p>
         </div>
         <div class="point">
-          <p class="heading">FULL BODY Dermashape Lymphatic Therapy PACKAGES + PRICING
+          <p class="heading">FULL BODY Dermashape Lymphatic Therapy PACKAGES + Pricing
           </p>
           <p class="subheading">8 Session - $1,200</p>
         </div>
@@ -1036,18 +1036,26 @@
 
 
 <!-- Modal -->
-<div id="bookingModal" class="modal">
+<!-- Modal -->
+<div id="bookingModal" class="modal" style="display: none;">
   <div class="modal-content">
-    <span class="close-button" onclick="closeModal()">&times;</span>
+    <span class="close-button" onclick="closeModal()" style="cursor:pointer;">&times;</span>
     <h2 class="modal-title">Book Your Session</h2>
     <form id="bookingForm">
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <input type="tel" name="phone" placeholder="Phone Number" required />
+      <textarea name="message" placeholder="Enter your preferred time" rows="4" required></textarea>
       <button type="submit" id="submitBtn">Submit</button>
     </form>
   </div>
 </div>
+
+<!-- Trigger Buttons (example) -->
+<div class="therapy-card">
+  <button>Book Now</button>
+</div>
+
 
 
 
@@ -1116,56 +1124,57 @@ setInterval(() => {
 
 
 
-   <script>
-const modal = document.getElementById('bookingModal');
-const bookButtons = document.querySelectorAll('.therapy-card button');
-const bookingForm = document.getElementById('bookingForm');
-const submitBtn = document.getElementById('submitBtn');
+ <script>
+  const modal = document.getElementById('bookingModal');
+  const bookButtons = document.querySelectorAll('.therapy-card button');
+  const bookingForm = document.getElementById('bookingForm');
+  const submitBtn = document.getElementById('submitBtn');
 
-bookButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
-});
-
-function closeModal() {
-  modal.style.display = 'none';
-  bookingForm.reset();
-  submitBtn.disabled = false;
-  submitBtn.textContent = 'Submit';
-}
-
-bookingForm.addEventListener('submit', async function (e) {
-  e.preventDefault();
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Submitting...';
-
-  const formData = {
-    name: bookingForm.name.value,
-    email: bookingForm.email.value,
-    phone: bookingForm.phone.value
-  };
-
-  try {
-    const response = await fetch('http://localhost:8080/api/v1/contact/create', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
+  bookButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      modal.style.display = 'flex';
     });
+  });
 
-    if (response.ok) {
-      alert('Booking successful!');
-      closeModal();
-    } else {
-      alert('Something went wrong!');
-    }
-  } catch (err) {
-    alert('Error while booking.');
-  } finally {
+  function closeModal() {
+    modal.style.display = 'none';
+    bookingForm.reset();
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit';
   }
-});
+
+  bookingForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+
+    const formData = {
+      name: bookingForm.name.value,
+      email: bookingForm.email.value,
+      phone: bookingForm.phone.value,
+      message: bookingForm.message.value
+    };
+
+    try {
+      const response = await fetch('http://localhost:8080/api/v1/contact/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert('Booking successful!');
+        closeModal();
+      } else {
+        alert('Something went wrong!');
+      }
+    } catch (err) {
+      alert('Error while booking.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+    }
+  });
 </script>
 
 
