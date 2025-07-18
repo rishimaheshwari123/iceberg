@@ -6147,10 +6147,10 @@ display: flex;
   .slide {
     height: 100%;
   }
-
+/* 
   .slide img {
-    object-fit: contain; /* Show full image */
-  }
+    object-fit: contain; 
+  } */
 
   .prev,
   .next {
